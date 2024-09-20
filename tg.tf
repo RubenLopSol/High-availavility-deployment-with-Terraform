@@ -9,7 +9,7 @@ resource "aws_lb_target_group" "target-group" {
     #port = 80
     #healthy_threshold = 2
     #unhealthy_threshold = 2
-    timeout = 60
+    timeout = 20
     #protocol = "HTTP"
     matcher = 200
   }
