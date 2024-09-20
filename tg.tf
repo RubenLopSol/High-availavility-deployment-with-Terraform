@@ -4,13 +4,8 @@ resource "aws_lb_target_group" "target-group" {
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc.id
   health_check {
-    #interval = 70
     path = "/"
-    #port = 80
-    #healthy_threshold = 2
-    #unhealthy_threshold = 2
     timeout = 20
-    #protocol = "HTTP"
     matcher = 200
   }
   tags = {
